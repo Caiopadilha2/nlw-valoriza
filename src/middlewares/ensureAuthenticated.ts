@@ -11,14 +11,15 @@ export function ensureAuthenticated(req: Request, res: Response, next: NextFunct
   const authToken = req.headers.authorization;
   //console.log(authToken);
 
-  const [ , token ] = authToken.split(" ")
-  // Split separa em 2 arrays
-  // console.log(token)
-  
   // Verificar se token está preenchido
   if (!authToken) {
     return res.status(401).end();
   }
+  
+  const [ , token ] = authToken.split(" ")
+  // Split separa em 2 arrays
+  // console.log(token)
+  
 
   try {
     // Verificar se token é válido
