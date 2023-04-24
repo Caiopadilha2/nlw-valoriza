@@ -1,5 +1,6 @@
 import { getCustomRepository } from "typeorm";
 import { TagsRepositories } from "../repositories/TagsRepositories";
+import { classToPlain } from "class-transformer"
 
 class ListTagsServices {
   async execute() {
@@ -7,7 +8,11 @@ class ListTagsServices {
 
     const tags = await tagsRepositories.find();
 
-    return tags;
+    if (!tags) {
+      throw new Error("No tags yet.");
+    }
+
+    return classToPlain(tags);
   }
 }
 

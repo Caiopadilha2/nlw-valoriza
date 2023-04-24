@@ -29,3 +29,4 @@ Fontes:
 - https://typeorm.io/using-cli#create-a-new-migration
 - https://www.guj.com.br/t/problemas-ao-nomear-migration-com-typeorm/425599
 - https://stackoverflow.com/questions/63838204/error-when-creating-a-new-migration-using-typeorm-and-nestjs-with-typescript
+- https://www.npmjs.com/package/class-transformer
